@@ -120,6 +120,11 @@ footer{border-top:1px solid var(--line);padding:35px 0;color:var(--muted);font-s
 </div></div></footer>
 <script>
 document.getElementById('bookingForm').addEventListener('submit',function(){
+  // Google Ads conversion event: booking form submitted
+  gtag('event', 'ads_conversion___1', {
+    // <event_parameters>
+  });
+
   const button=this.querySelector('button[type="submit"]');
   button.disabled=true;
   button.textContent='Надсилаємо заявку…';
